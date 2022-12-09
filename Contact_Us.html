@@ -1,0 +1,612 @@
+<html>
+<head>
+<title>Airline Reservation System</title>
+
+<script language="javascript">
+	function City()
+	{
+        if (document.f2.originCity.value=="NO"){
+	   alert("Please Select Origin City");
+           document.f2.originCity.focus();
+	   return false;
+	   }
+	if (document.f2.Destination_City.value=="NO"){
+	   alert("Please Select Destination City");
+           document.f2.Destination_City.focus();
+	   return false;
+	   }
+        if (document.f2.originCity.value==document.f2.Destination_City.value){
+	   alert("Error City . Please Select City");
+           document.f2.Destination_City.focus();
+	   return false;
+	   } 
+
+document.f2.dy.value=document.f2.DayFrom.value + "-" + document.f2.MonthFrom.value + "-" + document.f2.YearFrom.value;
+
+        return true;
+	}
+	</script>
+
+</head>
+
+<body background="Images/backgrnd[2].gif" link="#669900" vlink="#999933" alink="#FF9900" leftmargin="1" topmargin="1" marginheight="1" marginwidth="1">
+  
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" height="78">
+    <tbody><tr><td valign="top" width="326" height="78">
+                <img src="Images/zigzag.jpg" width="326" height="78"></td>
+        <td  width="100%" height="78" align="right" valign="top"  bgcolor="0A86E2" >
+        </td></tr></tbody></table>
+    
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" height="10">
+    <tbody><tr><td valign="top" width="100%" height="10">
+                <img src="Images/fon-up00.jpg" width="100%" height="10">
+            </td></tr></tbody></table>
+    
+    <table align="center" border="0" cellpadding="0" cellspacing="0" height="15"width="950">
+        <tbody><tr>
+            <td valign="top"  width="8">
+                <div style="float:left;">
+                    <img src="Images/red_left_new.jpg" align="left" height="100%" width="6">
+                   </div></td>
+                   <td style="font-size: 15px;" valign="top"height="10" width="900">
+                       <font face="Arial" color="red" ><center>
+                <a  href="Home.html" style="text-decoration: none;">Home</a>
+                |
+                <a href="About.html" style="text-decoration: none;">About Us</a>
+                |
+                <a href="Destinations.html" style="text-decoration: none;">Destinations</a>
+                |
+                <a href="Corporate.html" style="text-decoration: none;">Corporate</a>
+                |
+                <a href="Support-Faq.html" style="text-decoration: none;">Support-Faq?</a>
+                |
+                <a href="Contact_Us.html" style="text-decoration: none;">Contact Us</a>
+                |
+                <a href="Flight_Information.jsp" style="text-decoration: none;">AIE Time Table</a>
+                &nbsp;
+                   <img src="Images/arrow_white_new.gif" title="Consolidators">  
+                <a href="Reservation.html" style="text-decoration: none;">AIR Reservation</a>
+                &nbsp;
+                   <img src="Images/arrow_white_new.gif" title="Consolidators">     
+                <a href="Cancel_Reservation.html" style="text-decoration: none;">Reservation Cancel</a>
+                &nbsp;
+                   <img src="Images/arrow_white_new.gif" title="Consolidators">     
+                <a href="Login.html" style="text-decoration: none;">Login</a>
+       </center></font></td>
+           
+                <td valign="top"  width="8">
+                <div style="float:right;">
+                    <img src="Images/red_right_new.jpg" align="left" height="100%" width="6">
+                   </div></td></tr></tbody></table>
+
+    <div><table align="center" border="0" cellpadding="0" cellspacing="0" width="auto" height="3">
+    <tbody><tr><td align="center" width="auto" height="7"></td></tr></tbody></table></div>
+    
+    <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" height="900">
+    <tbody><tr><td valign="top" align="left" width="350" height="900">
+        <div valign="top" bgcolor="red" align="left" width="50" height="10">
+            <span><font color="red" face="Arial" style="font-size: 18px;">
+                Welcome Guest</font></span> </div>
+                
+                <div><table bgcolor="WhiteSmoke" border="0" cellpadding="0" cellspacing="0" width="350" height="10">
+  <tbody><tr><td valign="top" width="6" height="10">
+              <img src="Images/panel1.jpg" align="left"></td>
+             <td height="10" width="260">
+  <font color="red" face="Arial" style="font-size: 18px;"><center>
+      Flights
+  </center></font></td>
+    <td valign="top" align="right" width="6" height="10">
+        <img src="Images/panel12.jpg" align="right"></td></tr>
+    
+    <tr><td valign="top" width="6" height="auto"></td>
+        <td height="auto" width="260"></td>
+    <td valign="top" align="right" width="6" height="auto">
+                 <img src="Images/panel22_top.jpg" align="right" height="5" width="9">
+    </td></tr></tbody></table> </div>     
+            
+                 <form name="f2" method="post" onsubmit="return City()" action="Flight_Information.jsp">  
+                
+    <div><table bgcolor="WhiteSmoke" align="center" border="0" cellpadding="0" cellspacing="0" width="340" height="auto">
+    <tbody>
+        <tr> <td width="29%"><span> &nbsp; From</span></td>
+            
+            <td width="68%"><select name="originCity">
+	<option selected="selected" value="NO">Select Origin City</option>
+	                            <option value="Bangalore">Bangalore</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gurgaon">Gurgaon</option>
+                                    <option value="Kodaikanal">Kodaikanal</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Manali">Manali</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="New Delhi">New Delhi</option>
+                                    <option value="Ooty">Ooty</option>
+                                    <option value="Shimla">Shimla</option>
+                                    <option value="Chennai">Chennai</option></select></td></tr>       
+          <tr><td width="29%"><span> &nbsp; To</span> </td>                           
+              <td width="68%"><select name="Destination_City">
+	<option selected="selected" value="NO">Select Destination City</option>
+	                            <option value="Bangalore">Bangalore</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gurgaon">Gurgaon</option>
+                                    <option value="Kodaikanal">Kodaikanal</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Manali">Manali</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="New Delhi">New Delhi</option>
+                                    <option value="Ooty">Ooty</option>
+                                    <option value="Shimla">Shimla</option>
+                                    <option value="Chennai">Chennai</option>
+</select></td></tr>                            
+                <tr><td width="29%" valign="top">
+                    &nbsp; Departure
+                </td>
+                <td width="68%">
+                  <select name="DayFrom">
+	<option selected="selected" value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+	<option value="19">19</option>
+	<option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="23">23</option>
+	<option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+	<option value="27">27</option>
+	<option value="28">28</option>
+	<option value="29">29</option>
+	<option value="30">30</option>
+	<option value="31">31</option></select>
+         
+                    <select name="MonthFrom">
+	<option selected="selected" value="January">January</option>
+	<option value="February">February</option>
+	<option value="March">March</option>
+	<option value="April">April</option>
+	<option value="May">May</option>
+	<option value="June">June</option>
+	<option value="July">July</option>
+	<option value="August">August</option>
+	<option value="September">September</option>
+	<option value="October">October</option>
+	<option value="November">November</option>
+	<option value="December">December</option></select>
+                    
+                    <select name="YearFrom">
+	<option selected="selected" value="2020">2020</option>
+	<option value="2021">2021</option>
+	<option value="2022">2022</option>
+	<option value="2023">2023</option>
+	<option value="2024">2024</option>
+	<option value="2025">2025</option>
+	<option value="2026">2026</option>
+        <option value="2027">2027</option>
+        <option value="2028">2028</option></select> 
+                    
+<span><img src="Images/cal.png" title="DD/MM/YYYY" width="24" align="absmiddle"></span>
+(DD/MM/YYYY)
+   </td></tr>
+                 <tr style="display: none"><td colspan="3" align="center" width="250"></td>
+              <td><input size="8" name="dy" value="" maxlength="40" type="text">
+              </td></tr> 
+                 
+      <tr><td width="29%"></td>
+          <td align="right" width="68%">
+      <input name="FlightSearch" src="Images/b_search.gif" type="image"></td>
+          <td valign="top" align="right" width="10" height="auto"></td></tr>
+             <td valign="top"height="5" width="9"></td></tr>
+             </tbody></table></div></form>
+                
+     <div><table bgcolor="WhiteSmoke" align="center" border="0" cellpadding="0" cellspacing="0" width="350" height="auto">
+    <tbody><tr><td colspan="8" align="center"><img src="Images/panel_btm.jpg" height="47" width="100%"></td></tr>
+	</tbody></table></div>
+                
+       <div><table align="center" border="0" cellpadding="0" cellspacing="0" width="350" height="auto">
+    <tbody><tr><td><img src="Images/icon_news.gif" height="39" width="290"></td></tr>
+      </tbody></table></div>
+      
+   <div><table align="center" border="0" cellpadding="0" cellspacing="0" width="350" height="auto">
+    <tbody><tr><td>&nbsp;</td></tr></tbody></table></div>
+  
+    <div><table align="center" border="0" cellpadding="0" cellspacing="0" width="350" height="auto">
+    <tbody><tr><td><div>
+  <marquee scrollamount="1" direction="up" loop="true" onmouseover="this.scrollAmount=0" onmouseout="this.scrollAmount=1" height="125px">
+   <ul style="margin-left:15px;">
+       <li>All passenger travelling to UAE are requested to have their VISA on ARRIVAL 
+message updated from Air India Express in Dubai/Abu Dhabi/Sharjah unless they are carrying the original Visa with them. If the passenger only 
+has a photocopy or faxed copy of the Visa, VISA ON ARRIVAL message is mandatory. The airline would not be responsible if same is not 
+reflecting in the PNR and Passengers may be denied boarding.</li> <br><br></ul></marquee></div></td></tr>
+ </tbody></table></div>
+        <div><table align="center" border="0" cellpadding="0" cellspacing="0" width="350" height="auto">
+    <tbody><tr><td>&nbsp;</td></tr>
+ <tr><td><img src="Images/123.jpg" height="230" width="100%"></img> </td></tr>
+ <tr><td><img src="Images/airplane.gif" height="230" width="100%"></img> </td></tr>
+</tbody></table></div>
+
+        <td valign="top" align="right" width="600" height="900">   
+            
+              <div><table valign="top" align="center" border="0" cellpadding="0" cellspacing="0" height="100" width="580">                           
+     <tbody><tr><td valign="top" align="right" width="580" height="auto">
+     <marquee scrollamount="3" loop="true" onmouseover="this.scrollAmount=0" onmouseout="this.scrollAmount=3">
+             <a  align="center">
+                 <img src="Images/Payday_thumb_tcm61-41705.jpg" height="auto"></img>
+                 <img src="Images/HolyWeek_small_tcm61-62345.jpg" height="auto"></img>
+                 <img src="Images/hotdealspromofares_tcm61-12454.gif" height="auto"></img>
+                 <img src="Images/InsuranceSmall2_tcm61-49505.jpg" height="auto"></img></a>
+         	</marquee></td></tr></tbody></table></div>  
+         
+         <div><table valign="top" align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="550">                           
+     <tbody><tr><td valign="top" align="center" height="auto" width="130" >
+                 <img src="Images/contactus.gif" height="auto" align="left" width="auto"></img>
+                 </td></tr></tbody></table></div>
+                
+     <div><table valign="top" align="center" border="0" cellpadding="0" cellspacing="0" height="auto" width="550">                           
+     <tbody><tr><td>&nbsp;</td></tr>           
+                
+           <tr><td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p align="left"><b>Head office address is:</b></p></td></tr>
+           
+        <tr><td colspan="2" height="5" width="2"></td></tr>
+        
+        <tr><td colspan="2" style="font-weight: bold;" height="20">
+                <b>Airline Reservation System</b></td></tr>
+        
+        <tr><td colspan="2" style="font-size: 11px; font-family: Verdana;" height="16">
+                Air - India Building, Nariman Point,</td></tr>
+        
+        <tr><td colspan="2" style="font-size: 11px; font-family: Verdana;" height="16">
+                W.B. - 741250, India.</td></tr>
+      
+        <tr><td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p align="left"><b>Our contact numbers are:</b></p></td></tr>
+        
+     </tbody></table></div>
+         
+            <div><table valign="top" align="center" border="1" style="border-color:pink;" cellpadding="0" cellspacing="0" width="550">
+        <tbody><tr><td colspan="2" height="7" width="2"></td></tr>
+            
+            <tr style="font-weight: bold; background-color: silver;">
+            <td height="22" width="15%"><strong>Station</strong></td>
+            <td height="22" width="25%"><strong>Reservation No.</strong></td>
+            <td height="22" width="25%"><strong>Airport No.</strong></td>
+            <td height="22" width="35%"><strong>E-Mail</strong></td></tr>
+            
+        <tr valign="top">
+            <td height="29">Abudhabi</td>
+            <td height="29">009712-6322300</td>
+            <td height="29">5757033</td>
+            <td height="29">
+                <a href="mailto:airindia@eim.ae" style="text-decoration: none;">airindia@eim.ae</a><br>
+                <a href="mailto:ai747400@emirates.net.ae" style="text-decoration: none;">ai747400@emirates.net.ae</a>
+            </td></tr>
+        
+        <tr valign="top">
+            <td height="29">Ahemdabad</td>
+            <td height="29">550 5198<br>550 5199<br>550 5162</td>
+            <td height="29">079-22867237<br>079-22865211</td>
+            <td height="29"></td></tr>
+        
+        <tr valign="top">
+            <td height="29">AL-AIN</td>
+            <td height="29">009713-7557696</td>
+            <td height="29">009713-7855001</td>
+            <td height="29">
+                <a href="mailto:airindia@eim.ae" style="text-decoration: none;">airindia@eim.ae</a><br>
+                <a href="mailto:ai747400@emirates.net.ae" style="text-decoration: none;">ai747400@emirates.net.ae</a></td></tr>
+        
+        <tr valign="top">
+            <td height="29">Amritsar</td>
+            <td height="29">0183-2508122,<br>2504610</td>
+            <td height="29">0183-2214015</td>
+            <td height="29" valign="top">
+                <a href="mailto:atqcity@airindiaexpress.in" style="text-decoration: none;">
+                    atqcity@airindiaexpress.in</a><br>
+                <a href="mailto:iasmatq@yahoo.co.in" style="text-decoration: none;">
+                    iasmatq@yahoo.co.in</a><br>
+                <a href="mailto:atqairindia@yahoo.com" style="text-decoration: none;">
+                    atqairindia@yahoo.com</a></td></tr>
+        
+        <tr valign="top">
+            <td height="29">Bahrain</td>
+            <td height="29">00973-17220787<br>00973-17220788<br>00973-17220789<br>00973-17220796<br>00973-17220734</td>
+            <td height="29">Tel No:<br>
+                &nbsp; &nbsp; 00973-17321284<br>&nbsp; &nbsp; 00973-17321285<br>
+                Fax:<br>&nbsp; &nbsp; 00973-17339209</td>
+            <td height="29" valign="top">
+                <a href="mailto:bahcity@airindiaexpress.in" style="text-decoration: none;">bahcity@airindiaexpress.in</a></td></tr>
+        
+        <tr valign="top">
+            <td height="20">Bangkok</td>
+            <td height="20">Tel No.:<br>&nbsp; 00662-2165695<br>Fax No.:<br>&nbsp; 00662-2165689<br>&nbsp; 00662-2165690</td>
+            <td height="20">00662-1342633<br>00662-1342634<br>00662-1342635<br>00662-1342636<br>00662-1342637</td>
+            <td height="20">
+                <a href="mailto:airindia@loxinfo.co.th" style="text-decoration: none;">airindia@loxinfo.co.th</a><br>
+                <a href="mailto:bkkaiapt@hotmail.com" style="text-decoration: none;">bkkaiapt@hotmail.com</a></td></tr>
+   
+        <tr valign="top">
+            <td height="29">Chennai</td>
+            <td height="29"><p>044 2345 3375<br>044 2841 6161</p></td>
+            <td height="29">22560747/22564300</td>
+            <td height="29">
+                <a href="mailto:maacity@airindiaexpress.in" style="text-decoration: none;">maacity@airindiaexpress.in</a><br>
+                <a href="mailto:MAATRAFFIC@airindia.in" style="text-decoration: none;">MAATRAFFIC@airindia.in</a></td></tr>
+      
+        <tr valign="top">
+            <td height="29">Colombo</td>
+            <td height="29"><p>+ 94 11 2422249<br>+ 94 11 2325832<br>+ 94 11 5337108<br>+ 94 11 3033135</p></td>
+            <td height="29">+ 94 77 3033130<br>0094 77 2106210<br>+ 94 77 3033135</td>
+            <td height="29">
+                <a href="mailto:keerthi.peiris@aviation.hayleys.com" style="text-decoration: none;">keerthi.peiris@<br>aviation.hayleys.com</a><br>
+                <a href="mailto:chinthaka.adikaram@aviation.hayleys.com" style="text-decoration: none;">chinthaka.adikaram@<br>aviation.hayleys.com</a><br>
+                <a href="mailto:tony.fernando@aviation.hayleys.com" style="text-decoration: none;">tony.fernando@<br>aviation.hayleys.com</a><br></td></tr>
+       
+        <tr valign="top">
+            <td height="29">Delhi</td>
+            <td height="29">011-24658203<br>011-24658204<br>Timings:<br>0930-1730(Mon-Sat)</td>
+            <td height="29">Assistance counter:<br>&nbsp; &nbsp;011-49637533<br>Office Supervisor:<br>&nbsp; &nbsp;011-49637816<br></td>
+            <td height="29">
+                <a href="mailto:delcity@airindiaexpress.in" style="text-decoration: none;">elcity@airindiaexpress.in</a></td></tr>
+       
+        <tr valign="top">
+            <td height="20">Dhaka</td>
+            <td height="20">0880-2-8330106<br>0880-2-8330107<br>0880-2-8330108</td>
+            <td height="20">0880-2-8962904</td>
+            <td height="20">
+                <a href="mailto:aiexpresssdac@yahoo.com" style="text-decoration: none;">aiexpresssdac@yahoo.com</a><br>
+                <a href="mailto:icdac@yahoo.com" style="text-decoration: none;">icdac@yahoo.com</a></td></tr>
+       
+        <tr  valign="top">
+            <td height="29">Doha</td>
+            <td height="29"><p>(+974) 4441 8423/424</p></td>
+            <td height="29">(+974) 44622544</td>
+            <td height="29"><a href="mailto:dohcity@airindiaexpress.in" style="text-decoration: none;">dohcity@airindiaexpress.in</a></td></tr>
+        
+        <tr valign="top">
+            <td height="20">Dubai</td>
+            <td height="20">00971-4-2666950</td>
+            <td height="20">00971-4-2165828</td>
+            <td height="20">
+                <a href="mailto:dxbcity@airindiaexpress.in" style="text-decoration: none;">dxbcity@airindiaexpress.in</a>
+                <a href="mailto:ix@airindiaexpress.ae" style="text-decoration: none;">ix@airindiaexpress.ae</a><br>
+                <a href="mailto:dxbapt@airindiaexpress.in" style="text-decoration: none;">dxbapt@airindiaexpress.in</a></td></tr>
+       
+        <tr valign="top">
+            <td height="20">Hyderabad</td>
+            <td height="20">23389711<br>23389712<br>23389713</td>
+            <td height="20">&nbsp;</td>
+            <td height="20"></td></tr>
+        
+        <tr valign="top">
+            <td height="20">Jaipur</td>
+            <td height="20">Tel No:<br>&nbsp; &nbsp; 0141-2744840<br>&nbsp; &nbsp; 0141-2743500<br>
+                Fax:<br>&nbsp; &nbsp; 0141-5101015<br>Timings: 1000-1700</td>
+            <td height="20">Tel No:<br>&nbsp; &nbsp; 0141-2721333<br>&nbsp; &nbsp; 0141-2721519&nbsp;</td>
+            <td height="20">
+                <a href="mailto:iasmjai@yahoo.com" style="text-decoration: none;">iasmjai@yahoo.com</a></td></tr>
+      
+        <tr valign="top">
+            <td height="29">Jalandhar</td>
+            <td height="20">Tel No:<br>&nbsp; &nbsp; 0181-2452897<br>&nbsp; &nbsp; 0181-2457637<br>
+                Fax:<br>&nbsp; &nbsp; 0181-2225720</td>
+            <td height="29"></td>
+            <td height="29"></td></tr>
+        
+        <tr valign="top">
+            <td height="29">Kannur</td>
+            <td height="29">0497-2761654<br>0497-2761655</td>
+            <td height="29"></td>
+            <td height="29">
+                <a href="mailto:ccjcity@airindiaexpress.in" style="text-decoration: none;">ccjcity@airindiaexpress.in</a></td></tr>
+        
+        <tr valign="top">
+            <td height="20">Kerala</td>
+            <td height="20">0471-1412**</td>
+            <td height="20"></td>
+            <td height="20"></td></tr>
+        
+        <tr>
+            <td height="20">Kochi</td>
+            <td height="20">0471-1412**<br>0484-2381817</td>
+            <td height="20" valign="top">2610050</td>
+            <td height="20" valign="top">
+                <a href="mailto:cokcity@airindiaexpress.in" style="text-decoration: none;">cokcity@airindiaexpress.in</a></td></tr>
+     
+        <tr >
+            <td height="20">Kolkata</td>
+            <td height="20">033-22117879<br>033-22110041<br>033-22110730<br>Timings:<br>0930-1730(Mon-Sat)</td>
+            <td height="20" valign="top">033-25119864<br>033-25119031</td>
+            <td height="20" valign="top">
+                <a href="mailto:sreela.rao@airindia.in" style="text-decoration: none;">sreela.rao@airindia.in</a>
+                <a href="mailto:p.bandyopadhyay@airindia.in" style="text-decoration: none;">p.bandyopadhyay@airindia.in</a></td></tr>
+       
+        <tr>
+            <td height="20">Kozhikode</td>
+            <td height="20">0495-2760710<br>0495-2760715<br>0495-2766669</td>
+            <td height="20">0483-2715005<br>0483-2715646<br>0483-2717749</td>
+            <td height="20">
+                <a href="mailto:ccjcity@airindiaexpress.in" style="text-decoration: none;">ccjcity@airindiaexpress.in</a></td></tr>
+       
+        <tr valign="top">
+            <td height="20">Kuala Lumpur</td>
+            <td height="20">Tel No:<br>&nbsp; &nbsp; 00603-20726066<br>&nbsp; &nbsp; 00603-20721161<br>Fax No:<br>&nbsp; &nbsp; 00603-20702011<br>&nbsp; &nbsp; 00603-20727055</td>
+            <td height="20">Tel No:<br>&nbsp; &nbsp; 00603-87764787<br></td>
+            <td height="20">
+                <a href="mailto:sales@airindiakul.com" style="text-decoration: none;">sales@airindiakul.com</a><br>
+                <a href="mailto:airport@airindiakul.com" style="text-decoration: none;">airport@airindiakul.com</a></td></tr>
+      
+        <tr valign="top">
+            <td height="20">Kuwait</td>
+            <td height="20">00965-2-2438185<br>00965-2-2438186<br>00965-2-2438187</td>
+            <td height="20">00965-2-4718297</td>
+            <td height="20">
+                <a href="mailto:airindiakuwait@gmail.com" style="text-decoration: none;">airindiakuwait@gmail.com</a><br>
+                <a href="mailto:kwiairindiasales@gmail.com" style="text-decoration: none;">kwiairindiasales@gmail.com</a></td></tr>
+      
+        <tr valign="top">
+            <td height="20">Lucknow</td>
+            <td height="20">Tel No:<br>&nbsp; &nbsp; &nbsp; &nbsp; 0522-2624618<br>&nbsp; &nbsp; &nbsp; &nbsp; 0522-2620927<br>Timings:<br>1000-1735</td>
+            <td height="20">
+                Tel No:<br>&nbsp; &nbsp; 0522-2436132<br>&nbsp; &nbsp; 0522-2436327</td>
+            <td height="20">
+                <a href="mailto:iasmlko@yahoo.co.in" style="text-decoration: none;">iasmlko@yahoo.co.in</a><br>
+                <a href="mailto:apmlko@yahoo.co.in" style="text-decoration: none;">apmlko@yahoo.co.in</a></td></tr>
+       
+        <tr valign="top">
+            <td height="29">Malappuram</td>
+            <td height="29">0483-2738645<br>0483-2738646</td>
+            <td height="29"></td>
+            <td height="29">
+                <a href="mailto:ccjcity@airindiaexpress.in" style="text-decoration: none;">ccjcity@airindiaexpress.in</a></td></tr>
+     
+        <tr valign="top">
+            <td height="20">Mangalore</td>
+            <td height="20">Tel No:<br>&nbsp; &nbsp; 0824-2450673<br>&nbsp; &nbsp; 0824-2450811<br>Fax:<br>&nbsp; &nbsp; 0824-2450613</td>
+            <td height="20">0824-2220450<br>0824-2220451</td>
+            <td height="20">
+                <a href="mailto:ixeapt@airindiaexpress.in" style="text-decoration: none;">ixeapt@airindiaexpress.in</a><br>
+                <a href="mailto:m.alva@airindia.in" style="text-decoration: none;">m.alva@airindia.in</a><br>
+                <a href="mailto:ixecity@airindiaexpress.in" style="text-decoration: none;">ixecity@airindiaexpress.in</a></td></tr>
+     
+        <tr valign="top">
+            <td height="20">Mumbai</td>
+            <td height="20">022 22796330</td>
+            <td height="20">28318097<br>28318098</td>
+            <td height="20">
+                <a href="mailto:customersupport@airindiaexpress.in" style="text-decoration: none;">customersupport@<br>airindiaexpress.in</a></td></tr>
+      
+        <tr valign="top">
+            <td height="20">Muscat</td>
+            <td height="20">(968) 24818666<br>(968) 24818488</td>
+            <td height="20">(968) 24510737</td>
+            <td height="20">
+                <a href="mailto:aioman@omantel.net.om" style="text-decoration: none;">aioman@omantel.net.om</a></td></tr>
+       
+        <tr valign="top">
+            <td height="20">Nagpur</td>
+            <td height="20">Tel No:<br>&nbsp; &nbsp; 0712-2526300<br>&nbsp; &nbsp; 0712-2548993</td>
+            <td height="20">Tel No:<br>&nbsp; &nbsp; 0712-2283433</td>
+            <td height="20">
+                <a href="mailto:express.airindia@yahoo.com" style="text-decoration: none;">express.airindia@yahoo.com</a></td></tr>
+        
+        <tr valign="top">
+            <td height="20">Pune</td>
+            <td height="20">020-26057002<br>020-26059050</td>
+            <td height="20">020-26683210<br>020-26683211<br>020-26682472</td>
+            <td height="20">
+                <a href="mailto:pnq.sm@airindia.in" style="text-decoration: none;">pnq.sm@airindia.in</a><br>
+  (Airport):<br><a href="mailto:Ashok.Chandanshire@airindia.in" style="text-decoration: none;">Ashok.Chandanshire@<br>airindia.in</a><br></td></tr>
+        
+        <tr valign="top">
+            <td height="20">Salalah</td>
+            <td height="20">(968) 24818666<br>(968) 24818488</td>
+            <td height="20">&nbsp;</td>
+            <td height="20">
+                <a href="mailto:aioman@omantel.net.om" style="text-decoration: none;">aioman@omantel.net.om</a></td></tr>
+    
+        <tr valign="top">
+            <td height="32">Sharjah</td>
+            <td height="32">00971-06-5616635</td>
+            <td height="32">00971-6-5084841</td>
+            <td height="32">
+                <a href="mailto:shjcity@airindiaexpress.in" style="text-decoration: none;">shjcity@airindiaexpress.in</a><br>
+                <a href="mailto:shjaptix@emirates.net.ae" style="text-decoration: none;">shjaptix@emirates.net.ae</a><br>
+                <a href="mailto:ajay1@eim.ae" style="text-decoration: none;">ajay1@eim.ae</a></td></tr>
+   
+        <tr valign="top">
+            <td height="20">Singapore</td>
+            <td height="20">0065-63257247<br>0065-63257248<br>0065-63257249<br>Fax: 62251559</td>
+            <td height="20">65423991<br>65428444<br>Fax: 65450892</td>
+            <td height="20">
+                <a href="mailto:sincity@airindiaexpress.in" style="text-decoration: none;">sincity@airindiaexpress.in</a><br>
+                <a href="mailto:sinkkic@starhub.net.sg" style="text-decoration: none;">sinkkic@starhub.net.sg</a></td></tr>
+  
+        <tr valign="top">
+            <td height="20">Srinagar</td>
+            <td height="20">0194-2500247<br>0194-2500257<br>Timings:<br>1000-1735</td>
+            <td height="20">0194-2303334<br>0194-2303325<br>0194-2303912</td>
+            <td height="20">
+                <a href="mailto:smsxr@airindia.in" style="text-decoration: none;">smsxr@airindia.in</a><br>
+                <a href="mailto:reshi_farooq@yahoo.co.in" style="text-decoration: none;">reshi_farooq@yahoo.co.in</a></td></tr>
+ 
+        <tr valign="top">
+            <td height="20">Thiruvantapuram</td>
+            <td height="20">0471-2319595<br>Timings:<br>0930-1730</td>
+            <td height="20">0471-2501426</td>
+            <td height="20">
+                <a href="mailto:trvcity@airindiaexpress.in" style="text-decoration: none;">trvcity@airindiaexpress.in</a></td></tr>
+       
+        <tr valign="top">
+            <td height="20">Trichi</td>
+            <td height="20">0431-2481200<br>0431-2483800<br>Timings:<br>Weekdays: 0930-1300<br>and 1400-1700<br>Saturdays: 0930-1300</td>
+            <td height="20">0431-2341744<br>0431-2341722<br>0431-2341755</td>
+            <td height="20">
+                <a href="mailto:trzapt@airindiaexpress.in" style="text-decoration: none;">trzapt@airindiaexpress.in</a><br>
+                <a href="mailto:ammtrzsr@airindia.in" style="text-decoration: none;">ammtrzsr@airindia.in</a></td></tr>
+      
+        </tbody></table></div>
+        
+        <table align="center" border="0" cellpadding="2" cellspacing="3" >
+        <tbody><tr valign="top">
+            <td colspan="4" align="right" height="20">** Toll Free from MTNL/BSNL/VSNL Phones.</td></tr>
+    
+        <tr valign="top">
+            <td colspan="4" height="20">For any queries, please email us at<a href="mailto:kskarmakar@gmail.com" style="text-decoration: none;"> kskarmakar@gmail.com</a></td></tr>
+    
+        </tbody></table>
+        </td>
+                
+                
+                
+                
+   <table width="950" align="center" border="0" cellpadding="0" cellspacing="0" height="10">
+        <tbody><tr><td style="font-size: 10px;"  height="10" width="683">
+                <div  style="float:right;">
+             <font face="Arial" color="black" >
+          <A HREF="#top" style="text-decoration: none; color: red">Go Top</A>
+            </font></div></td></tr>
+    </tbody></table>
+        
+    <table  width="950" align="center" border="0" cellpadding="0" cellspacing="0" height="10">
+    <tbody><tr><td style="font-size: 10px;" valign="top" align="center" height="10" width="683">
+          <img src="Images/sep (2).png" align="center" width="683" height="10">
+    </tbody></table>
+
+    <table  width="950" align="center" border="0" cellpadding="0" cellspacing="0" height="15">
+    <tbody><tr> <td style="font-size: 10px;" valign="bottom" height="10" width="683">
+            <font face="Arial" color="black" ><center><br>
+            The site can be best viewed on 1024 X 768 pixels screen resolution and above.
+        </td></tr></center></font>
+    </tbody></table>
+
+<table  width="950" align="center" border="0" cellpadding="0" cellspacing="0" height="15">
+    <tbody><tr> <td style="font-size: 10px;" valign="bottom" height="10" width="683">
+    <div style="float:left;">
+        <DD>
+    <img src="Images/pic_powerby.gif" title="Airline Reservation System" align="left" width="60%" height="5%">
+        </dd>
+    </div>
+    <div  style="float:right;">
+        <font face="Arial" color="black" ><br>
+       <a >Terms &amp; Conditions</a>  | <a >Contact Us</a> | <a >Sitemap</a>| <a >Vigilance</a>
+  </div></td></tr>
+    </tbody></table>
+
+</body>
+</html>

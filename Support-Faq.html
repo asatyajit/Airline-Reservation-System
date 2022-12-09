@@ -1,0 +1,862 @@
+<html>
+<head>
+<title>Airline Reservation System</title>
+
+<script language="javascript">
+	function City()
+	{
+        if (document.f2.originCity.value=="NO"){
+	   alert("Please Select Origin City");
+           document.f2.originCity.focus();
+	   return false;
+	   }
+	if (document.f2.Destination_City.value=="NO"){
+	   alert("Please Select Destination City");
+           document.f2.Destination_City.focus();
+	   return false;
+	   }
+        if (document.f2.originCity.value==document.f2.Destination_City.value){
+	   alert("Error City . Please Select City");
+           document.f2.Destination_City.focus();
+	   return false;
+	   } 
+
+document.f2.dy.value=document.f2.DayFrom.value + "-" + document.f2.MonthFrom.value + "-" + document.f2.YearFrom.value;
+
+        return true;
+	}
+	</script>
+
+</head>
+
+<body background="Images/backgrnd[2].gif" link="#669900" vlink="#999933" alink="#FF9900" leftmargin="1" topmargin="1" marginheight="1" marginwidth="1">
+  
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" height="78">
+    <tbody><tr><td valign="top" width="326" height="78">
+                <img src="Images/zigzag.jpg" width="326" height="78"></td>
+        <td  width="100%" height="78" align="right" valign="top"  bgcolor="0A86E2" >
+        </td></tr></tbody></table>
+    
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" height="10">
+    <tbody><tr><td valign="top" width="100%" height="10">
+                <img src="Images/fon-up00.jpg" width="100%" height="10">
+            </td></tr></tbody></table>
+    
+    <table align="center" border="0" cellpadding="0" cellspacing="0" height="15"width="950">
+        <tbody><tr>
+            <td valign="top"  width="8">
+                <div style="float:left;">
+                    <img src="Images/red_left_new.jpg" align="left" height="100%" width="6">
+                   </div></td>
+                   <td style="font-size: 15px;" valign="top"height="10" width="900">
+                       <font face="Arial" color="red" ><center>
+                <a  href="Home.html" style="text-decoration: none;">Home</a>
+                |
+                <a href="About.html" style="text-decoration: none;">About Us</a>
+                |
+                <a href="Destinations.html" style="text-decoration: none;">Destinations</a>
+                |
+                <a href="Corporate.html" style="text-decoration: none;">Corporate</a>
+                |
+                <a href="Support-Faq.html" style="text-decoration: none;">Support-Faq?</a>
+                |
+                <a href="Contact_Us.html" style="text-decoration: none;">Contact Us</a>
+                |
+                <a href="Flight_Information.jsp" style="text-decoration: none;">AIE Time Table</a>
+                &nbsp;
+                   <img src="Images/arrow_white_new.gif" title="Consolidators">  
+                <a href="Reservation.html" style="text-decoration: none;">AIR Reservation</a>
+                &nbsp;
+                   <img src="Images/arrow_white_new.gif" title="Consolidators">     
+                <a href="Cancel_Reservation.html" style="text-decoration: none;">Reservation Cancel</a>
+                &nbsp;
+                   <img src="Images/arrow_white_new.gif" title="Consolidators">     
+                <a href="Login.html" style="text-decoration: none;">Login</a>
+       </center></font></td>
+           
+                <td valign="top"  width="8">
+                <div style="float:right;">
+                    <img src="Images/red_right_new.jpg" align="left" height="100%" width="6">
+                   </div></td></tr></tbody></table>
+
+    <div><table align="center" border="0" cellpadding="0" cellspacing="0" width="auto" height="3">
+    <tbody><tr><td align="center" width="auto" height="7"></td></tr></tbody></table></div>
+    
+    <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" height="900">
+    <tbody><tr><td valign="top" align="left" width="350" height="900">
+        <div valign="top" bgcolor="red" align="left" width="50" height="10">
+            <span><font color="red" face="Arial" style="font-size: 18px;">
+                Welcome Guest</font></span> </div>
+                
+                <div><table bgcolor="WhiteSmoke" border="0" cellpadding="0" cellspacing="0" width="350" height="10">
+  <tbody><tr><td valign="top" width="6" height="10">
+              <img src="Images/panel1.jpg" align="left"></td>
+             <td height="10" width="260">
+  <font color="red" face="Arial" style="font-size: 18px;"><center>
+      Flights
+  </center></font></td>
+    <td valign="top" align="right" width="6" height="10">
+        <img src="Images/panel12.jpg" align="right"></td></tr>
+    
+    <tr><td valign="top" width="6" height="auto"></td>
+        <td height="auto" width="260"></td>
+    <td valign="top" align="right" width="6" height="auto">
+                 <img src="Images/panel22_top.jpg" align="right" height="5" width="9">
+    </td></tr></tbody></table> </div>     
+            
+                 <form name="f2" method="post" onsubmit="return City()" action="Flight_Information.jsp">  
+                
+    <div><table bgcolor="WhiteSmoke" align="center" border="0" cellpadding="0" cellspacing="0" width="340" height="auto">
+    <tbody>
+        <tr> <td width="29%"><span> &nbsp; From</span></td>
+            
+            <td width="68%"><select name="originCity">
+	<option selected="selected" value="NO">Select Origin City</option>
+	                            <option value="Bangalore">Bangalore</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gurgaon">Gurgaon</option>
+                                    <option value="Kodaikanal">Kodaikanal</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Manali">Manali</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="New Delhi">New Delhi</option>
+                                    <option value="Ooty">Ooty</option>
+                                    <option value="Shimla">Shimla</option>
+                                    <option value="Chennai">Chennai</option></select></td></tr>       
+          <tr><td width="29%"><span> &nbsp; To</span> </td>                           
+              <td width="68%"><select name="Destination_City">
+	<option selected="selected" value="NO">Select Destination City</option>
+	                            <option value="Bangalore">Bangalore</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gurgaon">Gurgaon</option>
+                                    <option value="Kodaikanal">Kodaikanal</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Manali">Manali</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="New Delhi">New Delhi</option>
+                                    <option value="Ooty">Ooty</option>
+                                    <option value="Shimla">Shimla</option>
+                                    <option value="Chennai">Chennai</option>
+</select></td></tr>                            
+                <tr><td width="29%" valign="top">
+                    &nbsp; Departure
+                </td>
+                <td width="68%">
+                  <select name="DayFrom">
+	<option selected="selected" value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+	<option value="19">19</option>
+	<option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="23">23</option>
+	<option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+	<option value="27">27</option>
+	<option value="28">28</option>
+	<option value="29">29</option>
+	<option value="30">30</option>
+	<option value="31">31</option></select>
+         
+                    <select name="MonthFrom">
+	<option selected="selected" value="January">January</option>
+	<option value="February">February</option>
+	<option value="March">March</option>
+	<option value="April">April</option>
+	<option value="May">May</option>
+	<option value="June">June</option>
+	<option value="July">July</option>
+	<option value="August">August</option>
+	<option value="September">September</option>
+	<option value="October">October</option>
+	<option value="November">November</option>
+	<option value="December">December</option></select>
+                    
+                    <select name="YearFrom">
+	<option selected="selected" value="2020">2020</option>
+	<option value="2021">2021</option>
+	<option value="2022">2022</option>
+	<option value="2023">2023</option>
+	<option value="2024">2024</option>
+	<option value="2025">2025</option>
+	<option value="2026">2026</option>
+        <option value="2027">2027</option>
+        <option value="2028">2028</option></select> 
+                    
+<span><img src="Images/cal.png" title="DD/MM/YYYY" width="24" align="absmiddle"></span>
+(DD/MM/YYYY)
+   </td></tr>
+                 <tr style="display: none"><td colspan="3" align="center" width="250"></td>
+              <td><input size="8" name="dy" value="" maxlength="40" type="text">
+              </td></tr> 
+                 
+      <tr><td width="29%"></td>
+          <td align="right" width="68%">
+      <input name="FlightSearch" src="Images/b_search.gif" type="image"></td>
+          <td valign="top" align="right" width="10" height="auto"></td></tr>
+             <td valign="top"height="5" width="9"></td></tr>
+             </tbody></table></div></form>
+                
+     <div><table bgcolor="WhiteSmoke" align="center" border="0" cellpadding="0" cellspacing="0" width="350" height="auto">
+    <tbody><tr><td colspan="8" align="center"><img src="Images/panel_btm.jpg" height="47" width="100%"></td></tr>
+	</tbody></table></div>
+                
+       <div><table align="center" border="0" cellpadding="0" cellspacing="0" width="350" height="auto">
+    <tbody><tr><td><img src="Images/icon_news.gif" height="39" width="290"></td></tr>
+      </tbody></table></div>
+      
+   <div><table align="center" border="0" cellpadding="0" cellspacing="0" width="350" height="auto">
+    <tbody><tr><td>&nbsp;</td></tr></tbody></table></div>
+  
+    <div><table align="center" border="0" cellpadding="0" cellspacing="0" width="350" height="auto">
+    <tbody><tr><td><div>
+  <marquee scrollamount="1" direction="up" loop="true" onmouseover="this.scrollAmount=0" onmouseout="this.scrollAmount=1" height="125px">
+   <ul style="margin-left:15px;">
+       <li>All passenger travelling to UAE are requested to have their VISA on ARRIVAL 
+message updated from Air India Express in Dubai/Abu Dhabi/Sharjah unless they are carrying the original Visa with them. If the passenger only 
+has a photocopy or faxed copy of the Visa, VISA ON ARRIVAL message is mandatory. The airline would not be responsible if same is not 
+reflecting in the PNR and Passengers may be denied boarding.</li> <br><br></ul></marquee></div></td></tr>
+ </tbody></table></div>
+        <div><table align="center" border="0" cellpadding="0" cellspacing="0" width="350" height="auto">
+    <tbody><tr><td>&nbsp;</td></tr>
+ <tr><td><img src="Images/123.jpg" height="230" width="100%"></img> </td></tr>
+ <tr><td><img src="Images/airplane.gif" height="230" width="100%"></img> </td></tr>
+</tbody></table></div>
+ 
+        <td valign="top" align="right" width="600" height="900">
+            
+       <div><table valign="top" align="center" border="0" cellpadding="0" cellspacing="0" height="100" width="580">                           
+     <tbody><tr><td valign="top" align="right" width="580" height="auto">
+     <marquee scrollamount="3" loop="true" onmouseover="this.scrollAmount=0" onmouseout="this.scrollAmount=3">
+             <a  align="center">
+                 <img src="Images/Payday_thumb_tcm61-41705.jpg" height="auto"></img>
+                 <img src="Images/HolyWeek_small_tcm61-62345.jpg" height="auto"></img>
+                 <img src="Images/hotdealspromofares_tcm61-12454.gif" height="auto"></img>
+                 <img src="Images/InsuranceSmall2_tcm61-49505.jpg" height="auto"></img></a>
+         	</marquee></td></tr></tbody></table></div>  
+         
+         <div><table valign="top" align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="550">                           
+     <tbody><tr><td valign="top" align="center" height="auto" width="130" >
+                 <img src="Images/support.gif" height="auto" align="left" width="auto"></img>
+                 </td></tr></tbody></table></div>
+            
+           <div><table valign="top" align="center" border="0" cellpadding="0" cellspacing="0" height="auto" width="550">                           
+     <tbody><tr><td>&nbsp;</td></tr></tbody></table></div>
+            
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="550">
+        <tbody><tr><td color="red" height="20"><span><font color="red" face="Arial" style="font-size: 14px;">
+              <b>Frequently Asked Questions :</b></font></span></td></tr></tbody></table>
+            
+   <table align="center" border="0" cellpadding="0" cellspacing="0" width="550">
+        <tbody><tr>
+                <td colspan="3" height="20" style="background-color: #E1DECF"><font face="Arial"  style="font-size: 12px;">
+                &nbsp;<b>Booking Queries</b></font></td></tr>
+     
+        <tr><td colspan="3">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20"><img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>How do I book my flight?</b><a ></a></td></tr>
+       
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                You can make a new booking by any of the following methods: -<ul>
+                    <li>Buy a seat online at</li>
+                    <li>Walk into any of Airline Reservation System's airport or city offices to purchase over the counter.</li>
+                    <li>Visit one of our appointed Travel Agents. The list is available with our city and airport offices.</li></ul>
+                Once your payment has been made,you will be issued an Itinerary receipt for your reference.</td></tr>
+    
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Do I receive a ticket when I book a seat on an Airline Reservation System flight?</b></td></tr><tr>
+            <td height="20">&nbsp;</td>
+            
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>Airline Reservation System issues Itinerary Receipts instead of conventional tickets. The
+                    itinerary receipt is available online for web-based bookings or can also be handed
+                    over to you by the airline office or the travel agent once payment has been made
+                    for your reference.</p></td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Can I purchase an open-dated Airline Reservation System ticket?</b></td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>No. All the chosen sectors must be booked and paid for at the same time.</p></td></tr>
+       
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>What do I do if I have to fly Airline Reservation System within the next 24 hours?</b></td></tr>
+     
+        <tr><td height="20">&nbsp;</td>
+           
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>Should you need to travel within the next 24 hours then -</p>
+                <ol><li>Bookings can be made upto 90 minutes prior to flight departure through Airport office,
+                        City office, Travel Agent and website . It may be noted that
+                        Check-in counters close 60 minutes prior to flight departure.</li>
+                    <li>Call Airline Reservation System's Reservation office and make payment through your credit
+                        card up to 6 hours prior to flight departure during office hours.</li></ol>
+                Once your payment has been made, you will be issued a PNR Number and an Itinerary
+                receipt will be handed over to you at the airport /airline office or by the travel
+                agent for your reference. Please carry this receipt with you when you report for
+                the flight.</td></tr>
+   
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>How do I pay for my booking?</b></td>
+            
+         <tr><td height="20">&nbsp;</td> 
+        
+            <td class="base" colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                There are four ways to pay for your Airline Reservation System booking:<ol>
+                    <li>Online booking via the Internet using credit cards.</li>
+                    <li>Pay for flights booked through the Airline Reservation System's reservation office by credit card.</li>
+                    <li>For seats purchased at Airline Reservation System's walk-in city or airport offices we accept:
+                        <span class="Apple-converted-space">&nbsp;</span><br>
+                        i) cash<span>&nbsp;</span><br></br>
+                        ii) credit cards</li>
+                    <li>For seats purchased with one of Airline Reservation System's preferred travel agents, kindly
+                        refer to the individual agent for details.</li></ol></td></tr>
+   
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Can I change my reservation (route, date and time changes)?</b></td>
+            
+             <tr><td height="20">&nbsp;</td>
+            
+            <td class="base" colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                If you wish to change the date and time, you must inform us of your requirement
+                at least 12 hours before the scheduled departure of your flight. Changes to your
+                booking will incur a fee of Rs. 450 or equivalent local currency per passenger per
+                sector.The passenger will have to pay the difference in fare if the applicable basic
+                fare is greater than the current basic fare .However, if the applicable basic fare
+                is less than the current basic fare , the difference in amount will not be refunded
+                to the passenger.This can be done at the point where you have bought the ticket,
+                i.e. if you have made the booking through a travel agent you can get your itinerary
+                changed through that particular travel agent only.<span>&nbsp;</span><br></br>
+                However, our Reservation offices, Airport and City offices would be able to help
+                you in making changes in your itinerary, irrespective of from where you purchased
+                the ticket.<span>&nbsp;</span><br></br>
+                Change of route is not permitted in any case.</td></tr>
+   
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Is an Airline Reservation System booking valid for travel on other airlines?</b></a></td>
+            
+         <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                No, all the bookings are solely for travel on Airline Reservation System. Tickets are non-endorsable
+                to any other airline.</td> </tr>
+         
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td class="base" style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Is a return Ticket mandatory for travel to the UAE on a tourist Visa? If Yes,Has
+                    it got to be on the same airline too?</b><a id="1h" name="1h" style="color: rgb(102, 102, 102); text-decoration: underline;"></a></td>
+            
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                Passenger should be holding a valid RETURN TICKET on any carrier while travelling
+                to UAE. This is mandatory for all passengers arriving into UAE EXCEPT RESIDENT/EMPLOYMENT
+                VISA holders.</td></tr>
+        
+        <tr><td colspan="3" height="22">&nbsp;</td></tr>
+   
+        </tbody></table>
+            
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="550">
+        <tbody><tr><td colspan="3" style="background-color:#E1DECF;" height="20">
+                &nbsp;<b>Baggage Queries</b></td>
+        <td style="background-color:#E1DECF;" align="center" height="20">
+               <a href="#top"><img src="Images/img_top.gif" height="19" width="19"></a></td></tr>
+        
+        <tr><td colspan="3">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td class="base" style="font-size: 11px; font-family: Verdana;" height="20" width="94%">
+                <b>How much baggage can I check-in on Airline Reservation System?</b></td></tr>
+            
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                Each passenger (excluding infants) is allowed, depending on the destination, some
+                baggage free of charge, subject to the regulations of the airline. Checked baggage
+                in excess of free allowance is subject to excess baggage charge and space availability
+                on the aircraft. (Unless otherwise specified). Infants are entitled to 10 kilos
+                baggage free of charge.</td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>How much hand luggage (unchecked baggage) can I bring onboard Airline Reservation System flights?</b></td></tr>
+   
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p> Each passenger (excluding infants) is allowed to carry one small piece of hand luggage
+                    (unchecked baggage), which must not exceed 7 kilos. If your hand luggage exceeds
+                    the stated limits it will have to be checked in. In the event that your total checked-in
+                    baggage exceeds the free allowance, an excess baggage charge will be incurred. It
+                    is recommended that all valuable articles are only carried in your hand luggage.</p></td></tr>
+       
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>With upgraded security on aircraft what items am I not permitted to carry onboard
+                    the aircraft?</b></td></tr>
+            
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p> Recently, there has been an increase in the level of security onboard all aircraft.
+                    Passengers are not allowed to bring any sharp objects onto the aircraft. This includes
+                    nail clippers, scissors, razors, blades, bulbs, batteries or any other object that
+                    may be considered dangerous. The airline will not be held responsible for any such
+                    item, which is taken over by security agencies.</p></td></tr>
+        
+    <tr><td colspan="3" height="22"> &nbsp;</td></tr>
+    
+    </tbody></table>
+            
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="550">
+        <tbody><tr><td colspan="3" style="background-color:#E1DECF;" height="20">
+                &nbsp;<b>Lost Baggage &amp; Refundsa</b></td>
+            <td style="background-color:#E1DECF;" align="center" height="20">
+               <a href="#top"><img src="Images/img_top.gif"  height="19" width="19"></a></td></tr>
+       
+        <tr><td colspan="3">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" valign="top"height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>What should I do if my baggage has been lost during my flight with Airline Reservation System?
+                    Am I entitled to compensation?</b></td></tr>
+       
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                In the event of loss or damage to baggage the airline's liability is limited to
+                USD20 (or equivalent local currency) per kilo for checked-in baggage, provided,
+                loss of baggage has been reported to the airline, prior to leaving the customs enclosure
+                and if not traced within 7 days.</td></tr>
+    
+        <tr><td colspan="3">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Can I get a refund for a seat that has not been used?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">&nbsp;</td></tr>
+        
+            <tr><td height="20">&nbsp;</td>
+                <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>Please refer to Airline Reservation System's
+                    <a href="Cancellation_Policy.html" target="_new"> cancellation and refund policy</a>.</p>
+            </td></tr>
+    
+         <tr><td colspan="3">&nbsp;</td></tr>
+         
+    </tbody></table>
+            
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="550">
+        <tbody><tr><td colspan="3" style="background-color:#E1DECF;" height="20">
+                &nbsp;<b>Check-In</b></td>
+            <td style="background-color:#E1DECF;" align="center" height="22">
+             <a href="#top"><img src="Images/img_top.gif" height="19" width="19"></a></td></tr>
+        
+        <tr><td colspan="3">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>When do I check-in?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" width="3%">&nbsp;</td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                Airline Reservation System check-in counters open 3 hours prior to scheduled flight departures.
+                Kindly proceed to the check-in counters assigned to Airline Reservation System. Check-in
+                counters close 1 hour before the scheduled departure.</td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b><strong>How do I check-in without a ticket?</strong></b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>The check-in process is the same as with a conventional paper ticket. Simply bring
+                    your Itinerary Receipt and your valid passport and visa to the check-in counter.
+                    For domestic travel a photo-Id i.e driving license, credit card, Pan card, etc.
+                    is required.</p></td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td class="base" style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Is there any advance seat reservation facility?</b></a></td>
+            <td class="base" style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+       
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p> Yes. Seats can be reserved in advance at a nominal charge either at the time of
+                    booking or even after having made a booking.</p></td></tr>
+     
+       <tr><td colspan="3" height="22">&nbsp;</td></tr>
+       
+    </tbody></table>
+            
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="550">
+        <tbody><tr><td colspan="2" style="background-color:#E1DECF;" height="20">
+                &nbsp;<b>Delays and Cancellation of Flights</b></td>
+            <td align="center" style="background-color:#E1DECF;" height="20">
+                <a href="#top"><img src="Images/img_top.gif" height="19" width="19"></a></td></tr>
+       
+        <tr><td colspan="3">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20" width="94%">
+                <b>What is Airline Reservation System's procedure for delayed flights?</b></td>
+            <td class="base" style="font-size: 11px; font-family: Verdana;" align="center" width="3%">&nbsp;</td></tr>
+       
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                In the event of a delayed flight we make every effort to contact passengers in advance
+                to inform them of the rescheduled departure. Passengers are requested to provide
+                their local telephone contact in order to advise them regarding delays.</td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>What is Airline Reservation System's policy if a flight is cancelled?</b></td>
+            <td class="base" style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+      
+        <tr><td height="20">&nbsp;</td>
+            <td class="base" colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>Airline Reservation System has 2 options available to passengers in the event that a flight
+                    is cancelled.</p>
+                <ol><li>Passengers can be transferred to the next available Airline Reservation System flight without
+                        any additional charges subject to seats being available.</li><li>Fare can be refunded.</li></ol></td></tr>
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Am I entitled to a refund if I cancel my flight?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>Please refer to Airline Reservation System
+                    <a href="Cancellation_Policy.html" target="_new">cancellation policy</a>.</p></td></tr>
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>In the event that I miss my onward flight as a result of my first flight being delayed,
+                    will Airline Reservation System put me on the next available flight or refund my ticket?</b></td>
+            <td class="base" style="font-size: 11px; font-family: Verdana;" align="center" height="20">
+                &nbsp;</td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="3" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>No, Airline Reservation System operates on a point-to-point basis and will not be held responsible
+                    for the consequence of any delays experienced while flying Airline Reservation System.</p></td></tr>
+       
+        <tr><td colspan="3" height="22">&nbsp;</td></tr>
+        
+    </tbody></table>
+    
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="550">
+        <tbody><tr><td colspan="2" style="background-color:#E1DECF;" height="20">
+                &nbsp;<b>Traveling with infants, expectant
+                    mothers and travelers with special needs</b></td>
+            <td style="background-color:#E1DECF;" align="center" height="20">
+             <a href="#top"><img src="Images/img_top.gif" height="19" width="19"></a></td></tr>
+        
+        <tr><td colspan="3">&nbsp;</td></tr>
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20" width="94%">
+                <b>How does Airline Reservation System classify an infant, a child and an adult?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" width="3%">&nbsp;</td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                An infant is classified as one below 2 years of age, a child is classified as between
+                2 and 12 years of age and an adult is anyone over the age of 12 years. All infants
+                must be accompanied by an adult passenger in the ratio of one infant to one adult.</td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>How do I book for an infant?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>The same procedure has to be applied as is applicable for booking an adult. However,
+                    the date of birth is mandatory. Infant must be booked with the accompanying adult.</p></td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>What should I do if I need special assistance?</b></td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>Should you require any special services while you travel with Airline Reservation System
+                    please call our Reservation Offices and inform our staff of your requirements and
+                    they will do their best to accommodate your needs.</p></td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>What is Airline Reservation System's policy regarding unaccompanied young passengers?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                Airline Reservation System will accept unaccompanied children between 5 years and 12 years
+                of age.</td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>What are the regulations for expectant mothers traveling on Airline Reservation System?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+     
+        <tr><td align="center" height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                Expectant mothers may travel up to and including the 27 weeks of their pregnancy,
+                and will be accepted between 28 to 35 weeks if they are in possession of a doctor's
+                certificate confirming the stage of their pregnancy and stating that they are fit
+                to fly. Expectant mothers above their 36 weeks will not be allowed to fly on
+                Airline Reservation System.</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Can I request for special assistance for disabled passengers?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+       
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                Upon reservation we will make every effort to ensure that any special services you
+                may require are provided to you.</td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Can I book for a wheelchair in advance?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                Yes, wheelchair can be booked in advance.</td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>How do I make a request for specific seats?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                Specific seats can be reserved in advance either at the time of booking or even
+                after having made a booking at no extra cost.In case of seats not reserved in advance,
+                the earlier you check-in, the better chances you have to request for your preferred
+                seat.</td></tr>
+        
+        <tr><td colspan="3" height="22">&nbsp;</td></tr>
+        
+    </tbody></table>
+            
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="550">
+        <tbody><tr><td colspan="2" style="background-color:#E1DECF;" height="20">
+                &nbsp;<b>General FAQ</b></td>
+            <td style="background-color:#E1DECF;" align="center" height="20">
+                <a href="#top"><img src="Images/img_top.gif" border="0" height="19" width="19"></a></td></tr>
+        
+        <tr><td colspan="3">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20" width="94%">
+                <b>Does Airline Reservation System provide any food or drinks onboard?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" width="3%">&nbsp;</td></tr>
+       
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                Airline Reservation System will provide pre-set meals in addition to soft beverages .</td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Where does Airline Reservation System fly?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>Currently Airline Reservation System flies to 14 international destinations – Dubai, Sharjah,
+                    Abu Dhabi, Al Ain, Muscat, Salalah, Bahrain, Doha, Kuwait, Singapore, Kuala Lampur,
+                    Bangkok, Colombo and Dhaka and from 16 Indian cities – Kozhikode, Kochi, Thiruvananthpuram,
+                    Chennai, Mangalore, Tiruchirapally, Hyderabad, Mumbai, Delhi, Pune, Nagpur, Amritsar,
+                    Lucknow, Jaipur, Kolkata and Ahmedabad.</p></td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>On the domestic front, we operate on Mumbai-Kochi, Mumbai-Kozhikode, Mumbai-Delhi,
+                    Mumbai-Chennai, Mumbai-Pune, Mumbai-Nagpur, Mumbai – Mangalore, Mumbai – Thiruvananthpuram,
+                    Mumbai – Ahmedabad, Ahmedabad-Nagpur, Delhi-Jaipur, Delhi – Lucknow, Kozhikode-Kochi,
+                    Kozhikode- Thiruvananthpuram, Kochi-Thiruvananthpuram, Chennai – Tiruchirapally,
+                    Chennai – Hyderabad and Kozhikode – Mangalore sectors.</p></td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr>
+            <td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>What type of aircraft does Airline Reservation System fly?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+        
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>Airline Reservation System operates a B737-800 new generation aircraft in an all economy
+                    version.</p></td></tr>
+        
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Does Airline Reservation System offer any special offers such as a frequent flyer program?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+      
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>No, Airline Reservation System does not offer a frequent flyer program.</p></td></tr>
+      
+        <tr><td colspan="3" height="20">&nbsp;</td></tr>
+        
+        <tr><td align="center" height="20">
+                <img src="Images/bullet2.gif" height="8" width="8"></td>
+            <td style="font-size: 11px; font-family: Verdana;" height="20">
+                <b>Is a return Ticket mandatory for travel to the UAE on a tourist Visa? If Yes,Has
+                    it got to be on the same airline too?</b></td>
+            <td style="font-size: 11px; font-family: Verdana;" align="center" height="20">&nbsp;</td></tr>
+      
+        <tr><td height="20">&nbsp;</td>
+            <td colspan="2" style="font-size: 11px; font-family: Verdana;" height="20">
+                <p>Passenger should be holding RETURN TICKET on Airline Reservation System
+                    (no other carrier) this is mandatory for all passengers arriving into UAE
+                    EXCEPT RESIDENT/EMPLOYMENT VISA holders.</p></td></tr>
+      
+        <tr><td colspan="3" height="22">&nbsp;</td></tr>
+        
+        <tr align="center"><td  colspan="3" style="font-size: 11px; font-family: Verdana;" height="22">
+                <p>If you have any more questions, please
+                    <a href="Contact_Us.html" style="text-decoration: underline;"><b>contact us</b></a></p></td></tr>
+        
+        </tbody></table>
+     
+            
+     </td></tr></tbody></table> 
+                    
+<table width="950" align="center" border="0" cellpadding="0" cellspacing="0" height="10">
+        <tbody><tr><td style="font-size: 10px;"  height="10" width="683">
+                <div  style="float:right;">
+             <font face="Arial" color="black" >
+          <A HREF="#top" style="text-decoration: none; color: red">Go Top</A>
+            </font></div></td></tr>
+    </tbody></table>
+        
+    <table  width="950" align="center" border="0" cellpadding="0" cellspacing="0" height="10">
+    <tbody><tr><td style="font-size: 10px;" valign="top" align="center" height="10" width="683">
+          <img src="Images/sep (2).png" align="center" width="683" height="10">
+    </tbody></table>
+
+    <table  width="950" align="center" border="0" cellpadding="0" cellspacing="0" height="15">
+    <tbody><tr> <td style="font-size: 10px;" valign="bottom" height="10" width="683">
+            <font face="Arial" color="black" ><center><br>
+            The site can be best viewed on 1024 X 768 pixels screen resolution and above.
+        </td></tr></center></font>
+    </tbody></table>
+
+<table  width="950" align="center" border="0" cellpadding="0" cellspacing="0" height="15">
+    <tbody><tr> <td style="font-size: 10px;" valign="bottom" height="10" width="683">
+    <div style="float:left;">
+        <DD>
+    <img src="Images/pic_powerby.gif" title="Airline Reservation System" align="left" width="60%" height="5%">
+        </dd>
+    </div>
+    <div  style="float:right;">
+        <font face="Arial" color="black" ><br>
+       <a >Terms &amp; Conditions</a>  | <a >Contact Us</a> | <a >Sitemap</a>| <a >Vigilance</a>
+  </div>
+ 
+ </td></tr>
+    </tbody></table>
+
+</body>
+</html>
